@@ -1,0 +1,125 @@
+/* =========================
+    Responsive left menu
+    ==========================*/
+
+/* 
+    Mobile first
+    ==========================*/
+
+    .vertical-nav {
+    	/* Positioning */	
+    	position: fixed;
+    	left: -200px;
+    	top: 70px;          
+
+    	/* Display and box template */
+    	width: 200px
+     min-height: 100%;
+     height: 100%;
+
+     /* Others */
+     background-color: #404040;
+     box-shadow: 0 0 10px rgba(0,0,0,0.6);
+ }
+
+ .menu {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu__item {
+    list-style-type: none;
+}
+
+.menu__item a {
+   /* Positioning */
+   position: relative;
+
+   /* Display & Box template */	
+   display: block;
+   padding: 12px;
+   border-bottom: 1px dotted #52535a;
+
+   /* Others */	
+   font-size: 14px;
+   text-decoration: none;
+   color: #FFFFFF;
+   font-weight: 400;
+   overflow: hidden;
+}
+
+.menu__item a:hover {
+   color: #52535a;
+   background-color:#fcfcfc;
+}
+
+.menu__item i {
+   width: 16px;
+   padding-right: 4px;
+}  
+
+.toggle-menu {
+   left: 0px;
+}
+
+.menu__button {
+    /* Positioning */
+    position: absolute;
+    left: 20px;
+    top: 15%;
+    z-index: 1;
+
+    /* Display & Box template */
+    display: block;    
+    height: 18px;
+    padding: 12px;
+
+    /* Others */
+    background-color: #fff;
+    
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.menu__button:before {
+
+   /* Display & Box template */
+   content: "";
+   display: inline-block;
+   width: 20px;
+   height: 0.25em;
+
+   /* Others */
+   background: #404148;
+   vertical-align: top;
+   box-shadow: 0 0.38em 0 0 #404148,0 0.8em 0 0 #404148;
+}
+
+/* 
+    Small devices (tablets)
+    ==========================*/
+    @media (min-width: 768px) {
+
+    	.vertical-nav {
+    		left: 0;
+    	}
+
+    	.toggle-menu {
+    		left: -200px;
+    	}
+    }
+
+/* 
+    Medium devices (desktops)
+    ==========================*/
+    @media (min-width: 992px) {
+
+    }
+
+/* 
+Large devices (Large desktops)
+==========================*/
+@media (min-width: 1200px) {
+
+}
