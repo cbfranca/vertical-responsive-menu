@@ -3,6 +3,10 @@ Responsive Left Menu
 
 A mobile first left menu using HTML, CSS &amp; JS
 
+Live demo
+-----------------------------------
+
+[See the demo](http://cbfranca.github.io/responsive-left-menu/demos/demo.html)
 
 How to use
 ----------------------------------
