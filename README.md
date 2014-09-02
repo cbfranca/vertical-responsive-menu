@@ -52,13 +52,13 @@ Screenshots
 
 ### Mobile 
               
-![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/mobile.jpg "Mobile - Iphone 5
+![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/mobile.JPG "Mobile - Iphone 5
 ")
 
 ### Tablet
 
-![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/tablet.jpg "Tablet - Ipad")
+![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/tablet.JPG "Tablet - Ipad")
 
 ### Desktop
 
-![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/desktop.jpg "Desktop")
+![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/desktop.JPG "Desktop")
