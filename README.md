@@ -46,3 +46,19 @@ How to use
   </ul>     
 </nav>
 ```
+
+Screanshots
+--------------------------------------
+
+### Mobile 
+
+![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/mobile.jpg "Mobile - Iphone 5
+")
+
+### Tablet
+
+![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/tablet.jpg "Tablet - Ipad")
+
+### Desktop
+
+![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/desktop.jpg "Desktop")
