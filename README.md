@@ -47,11 +47,11 @@ How to use
 </nav>
 ```
 
-Screanshots
+Screenshots
 --------------------------------------
 
 ### Mobile 
-
+              
 ![alt text](https://raw.githubusercontent.com/cbfranca/responsive-left-menu/master/demos/imgs/mobile.jpg "Mobile - Iphone 5
 ")
 
