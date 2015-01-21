@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -13,6 +18,7 @@ header {
 
 .wrapper {
   margin-top: 70px;
+  padding: 15px;
 
   -webkit-transition: all .4s ease-out;
   -moz-transition: all .4s ease-out;
