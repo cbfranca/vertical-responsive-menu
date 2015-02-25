@@ -1,0 +1,136 @@
+/*
+Responsive left menu
+*/
+
+/* Variáveis */
+@import "variables";
+
+
+.vertical-nav {
+  position: absolute;
+  left: -200px;
+  top: 70px;
+  bottom: 0;
+  width: $vertical_nav_width;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: all .4s ease-out;
+}
+
+.menu {
+  padding-left: 0;
+  width: 100%;
+  margin-top: 20px;
+  list-style-type: none;
+
+  .menu--item {
+    transition: all .2s ease-out;
+  }
+
+  .menu--item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .menu--item a {
+    position: relative;
+    display: block;
+    padding: 12px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 400;
+    overflow: hidden;
+    transition: all .2s ease-out;
+  }
+
+  .menu--item a:hover,
+  .menu--subitens__isOpened > a {
+    color: #000;
+  }
+
+  .menu--item i {
+    padding-right: 4px;
+    vertical-align: -10%;
+  }
+
+  /* Menu nível 2*/
+  .menu--subitens {
+    display: none;
+    padding-left: 0;
+    padding-bottom: 8px;
+    list-style: none;
+    color: #fff;
+  }
+
+  .menu--subitem {  }
+
+  .menu--subitens__isOpened {
+    display: block;
+  }
+
+  .menu--subitem i {
+    padding-right: 20px;
+  }
+
+  .menu--subitem_link {
+    padding: 8px 12px 8px 20px;
+    font-size: 0.85em;
+  }
+
+  .menu--subitem_link:hover {
+    color: #52535a;
+  }
+
+}
+
+/*Toogle Menu Button*/
+.toggle_menu {
+  left: 0;
+}
+.menu_button {
+  position: absolute;
+  left: 20px;
+  top: 15%;
+  z-index: 1;
+  display: block;
+  height: 18px;
+  padding: 12px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.menu_button:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 0.25em;
+  background: #404148;
+  vertical-align: top;
+  box-shadow: 0 0.38em 0 0 #404148, 0 0.8em 0 0 #404148;
+}
+
+/* Small devices (tablets) */
+@media (min-width: 768px) {
+  .vertical_nav {
+    left: 0;
+  }
+  .toggle_menu {
+    left: -200px;
+  }
+}
+
+/* Medium devices (desktops) */
+@media (min-width: 992px) {
+  .toggle_menu {
+    left: -136px;
+  }
+  .menu_icon--isCollapsed {
+    float: right;
+  }
+}
+
+/* Large devices (Large desktops) */
+@media (min-width: 1200px) {
+
+}
+
