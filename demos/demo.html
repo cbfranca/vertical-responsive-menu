@@ -7,24 +7,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link href='../assets/vendor/normalize.css/normalize.css' rel='stylesheet'>
+  <link href='../assets/vendor/fontawesome/css/font-awesome.min.css' rel='stylesheet'>
   <link href="../assets/css/responsive-left-menu.css" rel="stylesheet">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="demo.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="header">
-    <span id="menuButton" class="menu_button"></span>
+    <button type="button" id="toggleMenu" class="toggle_menu">
+      <i class="fa fa-bars"></i>
+    </button>
   </header>
 
-  <nav id="verticalNav" class="vertical-nav">
+  <nav id="verticalNav" class="vertical_nav">
 
     <ul id="js-menu" class="menu">
 
-      <li class="menu--item">
-        <a href="#" title="Dashboard"><i class="fa fa-fw fa-2x fa-user"></i>Item 1</a>
+      <li class="menu--item  menu--item__has_sub_menu">
+
+        <label for="inputHasSubMenu" class="menu--link" title="Item 1">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 1</span>
+        </label>
+
+        <input type="checkbox" id="inputHasSubMenu" class="input_has_sub_menu">
 
         <ul class="menu--subitens">
           <li class="menu--subitem">
@@ -41,30 +49,38 @@
       </li>
 
       <li class="menu--item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 2
+        <a href="#" class="menu--link" title="Item 2">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 2</span>
         </a>
       </li>
 
       <li class="menu--item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 3
+        <a href="#" class="menu--link" title="Item 3">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 3</span>
         </a>
       </li>
 
       <li class="menu--item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 4
+        <a href="#" class="menu--link" title="Item 4">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 4</span>
         </a>
       </li>
 
       <li class="menu--item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 5
+        <a href="#" class="menu--link" title="Item 5">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 5</span>
         </a>
       </li>
 
     </ul>
+
+    <a id="vertical_nav--minify_menu" class="vertical_nav--minify_menu">
+      <i class="fa"></i>
+    </a>
 
   </nav>
 
