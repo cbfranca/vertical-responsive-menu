@@ -1,0 +1,20 @@
+// Variables
+// ==================
+
+$menu_link_color: #666;
+$vertical_nav_bg_color: #f6f6f6;
+$menu_item_background: darken( $vertical_nav_bg_color, 5% );
+$menu_item_hover_background: darken( $vertical_nav_bg_color, 10% );
+
+$darker_background_5: darken( $vertical_nav_bg_color, 5% );
+$darker_background_10: darken( $vertical_nav_bg_color, 10% );
+$darker_background_15: darken( $vertical_nav_bg_color, 15% );
+
+$vertical_nav_width: 200px;
+$vertical_nav_margin_top: 50px;
+$vertical_nav_minify_width: 50px;
+$menu_subitens_on_minify_menu: 150px;
+$menu_link_height: 40px;
+$menu_subitem_link_padding: 16px;
+
+$menu_link_font_size: 0.875rem;
