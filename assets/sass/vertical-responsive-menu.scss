@@ -104,7 +104,7 @@ html {
     color: #000;
   }
 
-  .menu--subitens {
+  .sub_menu {
     display: block;
   }
 
@@ -145,37 +145,41 @@ html {
 
 
 // Menu sub level
-.menu--subitens {
+.sub_menu {
   display: none;
   overflow: hidden;
   padding-left: 0;
   list-style: none;
 }
-.menu--subitem_link {
+.sub_menu--link {
   display: block;
   padding-left: $vertical_nav_minify_width;
   padding-right: $menu_subitem_link_padding;
   font-size: $menu_link_font_size;
   color: $menu_link_color;
   text-decoration: none;
+
+  &:hover {
+    color: #000;
+    background: $menu_item_hover_background;
+  }
+
 }
-.menu--subitem_link:hover,
-.menu--subitem_link__active {
+.sub_menu--link__active {
   color: #000;
-  background: $menu_item_hover_background;
   font-weight: 500;
 }
 // End - Menu sub level
 
 
-// vertical_nav--minify_menu -- display none in mobile
-.vertical_nav--minify_menu {
+// collapse_menu -- display none in mobile
+.collapse_menu {
   display: none;
 }
 
 
 // Small devices (tablets)
-@media (min-width: 768px) { }
+@media (min-width: 768px) {}
 
 
 // Medium devices (desktops)
@@ -214,24 +218,24 @@ html {
       content: "";
     }
 
-    .vertical_nav--minify_menu i:before {
-      content: "\f101";
+    .collapse_menu i:before {
+      content: "\f054";
     }
 
 
     // Menu sub level
     .menu--subitens__opened .menu--label,
-    .menu--subitens__opened .menu--subitens {
+    .menu--subitens__opened .sub_menu {
       display: block;
     }
-    .menu--subitens {
+    .sub_menu {
       position: absolute;
       top: $menu_link_height;
       left: $vertical_nav_minify_width;
       width: $menu_subitens_on_minify_menu;
       background: $menu_item_background;
     }
-    .menu--subitem_link {
+    .sub_menu--link {
       padding-left: $menu_subitem_link_padding;
     }
     // End - Menu sub level
@@ -240,37 +244,54 @@ html {
   // End - Minify menu
 
 
-  .vertical_nav--minify_menu {
+  .collapse_menu {
     position: absolute;
     bottom: 0px;
     display: block;
     width: 100%;
     height: $menu_link_height;
     line-height: $menu_link_height;
-    padding-right: 15px;
-    text-align: right;
-    background: $vertical_nav_bg_color;
+    padding: 0;
     border: 0;
     border-top: 1px solid #e6e6e6;
+    background: $vertical_nav_bg_color;
     color: #666;
-    font-size: 22px;
+    font-size: $menu_link_font_size;
+    text-align: left;
     cursor: pointer;
 
-    i:before {
-      content: "\f100";
+    &:hover {
+      color: #000;
+      background: $darker_background_10;
     }
 
-    &:hover {
-      background: $darker_background_10;
+    .collapse_menu--icon {
+      display: block;
+      float: left;
+      width: 50px;
+      height: $menu_link_height;
+      line-height: $menu_link_height;
+      font-size: 20px;
+
+      &:before {
+        content: "\f053";
+      }
+
+    }
+
+    .collapse_menu--label {
+      display: block;
+      height: $menu_link_height;
+      line-height: $menu_link_height;
     }
 
   }
 
+
 }
+// End - Medium devices (desktops)
 
 
 // Large devices (Large desktops)
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
