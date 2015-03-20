@@ -1,65 +1,126 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Left Menu - Demonstration </title>
+  <title>Vertical Responsive Menu - Demonstration</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="../src/responsive-left-menu.css">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="demo.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet'>
+  <link href='../assets/vendor/normalize.css/normalize.css' rel='stylesheet'>
+  <link href='../assets/vendor/fontawesome/css/font-awesome.min.css' rel='stylesheet'>
+  <link href="../assets/css/vertical-responsive-menu.css" rel="stylesheet">
+  <link href="demo.css" rel="stylesheet">
 </head>
+
 <body>
-  <header class="header">
-    <span id="menuButton" class="menu__button"></span>
+
+  <header class="header clearfix">
+    <button type="button" id="toggleMenu" class="toggle_menu">
+      <i class="fa fa-bars"></i>
+    </button>
+    <h1>Vertical Responsive Menu</h1>
   </header>
-  <nav id="verticalNav" class="vertical-nav">
+
+  <nav class="vertical_nav">
+
     <ul id="js-menu" class="menu">
-      <li class="menu__item">
-        <a href="#" title="Dashboard"><i class="fa fa-fw fa-2x fa-user"></i>Item 1</a>
-        <ul class="menu__subitens">
-          <li class="menu__subitem">
-            <a href="#" class="menu__subitem-link">Submenu</a>
+
+      <li class="menu--item  menu--item__has_sub_menu">
+
+        <label class="menu--link" title="Item 1">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 1</span>
+        </label>
+
+        <ul class="sub_menu">
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link sub_menu--link__active">Submenu</a>
           </li>
-          <li class="menu__subitem">
-            <a href="#" class="menu__subitem-link">Submenu</a>
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
           </li>
-          <li class="menu__subitem">
-            <a href="#" class="menu__subitem-link">Submenu</a>
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
           </li>
         </ul>
       </li>
-      <li class="menu__item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 2
+
+      <li class="menu--item">
+        <a href="#" class="menu--link" title="Item 2">
+          <i class="menu--icon  fa fa-fw fa-briefcase"></i>
+          <span class="menu--label">Item 2</span>
         </a>
       </li>
-      <li class="menu__item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 3
+
+      <li class="menu--item">
+        <a href="#" class="menu--link" title="Item 3">
+          <i class="menu--icon  fa fa-fw fa-cog"></i>
+          <span class="menu--label">Item 3</span>
         </a>
       </li>
-      <li class="menu__item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 4
+
+      <li class="menu--item  menu--item__has_sub_menu">
+
+        <label class="menu--link" title="Item 4">
+          <i class="menu--icon  fa fa-fw fa-database"></i>
+          <span class="menu--label">Item 4</span>
+        </label>
+
+        <ul class="sub_menu">
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
+          </li>
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
+          </li>
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="menu--item">
+        <a href="#" class="menu--link" title="Item 5">
+          <i class="menu--icon  fa fa-fw fa-globe"></i>
+          <span class="menu--label">Item 5</span>
         </a>
       </li>
-      <li class="menu__item">
-        <a href="" title="Dashboard">
-          <i class="fa fa-fw fa-2x fa-user"></i>Item 5
-        </a>
-      </li>
+
     </ul>
+
+    <button id="collapse_menu" class="collapse_menu">
+      <i class="collapse_menu--icon  fa fa-fw"></i>
+      <span class="collapse_menu--label">Recolher menu</span>
+    </button>
+
   </nav>
-  <div id="wrapper" class="wrapper">
-    <article>
-      <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloremque ipsam totam libero ullam accusamus blanditiis dolore quibusdam sunt corporis laborum, rem asperiores soluta distinctio necessitatibus repudiandae omnis, odio pariatur!</p>
-      </section>
-      <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloremque ipsam totam libero ullam accusamus blanditiis dolore quibusdam sunt corporis laborum, rem asperiores soluta distinctio necessitatibus repudiandae omnis, odio pariatur!</p>
-      </section>
-    </article>
+
+
+  <div class="wrapper">
+
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum interdum orci in finibus. Cras eu ante condimentum, efficitur libero vitae, rhoncus eros. Curabitur a auctor sem, ac porta metus. Ut volutpat eu neque nec mattis. Nullam viverra sem vitae diam sollicitudin pulvinar. Ut elementum urna non mollis eleifend. Cras maximus rhoncus lacus, vitae pellentesque nunc sodales a. Donec blandit nec odio sit amet porttitor.
+      </p>
+      <p>
+        Vestibulum a est vitae risus porta sollicitudin vitae a neque. Curabitur facilisis risus quis libero viverra aliquet. Vestibulum vehicula elit eget velit vulputate, id bibendum mauris hendrerit. Donec eleifend lorem eu pulvinar feugiat. Cras at feugiat tellus. Ut non orci ac turpis euismod iaculis non at sem. Vestibulum sit amet nulla est. Etiam sodales condimentum tellus, sed auctor diam sagittis et. Suspendisse id orci at lectus scelerisque mattis. Vivamus mollis euismod massa, vitae volutpat nisi commodo et. Donec a tellus nulla. Nunc quis ligula cursus, blandit nulla vitae, ullamcorper neque. Aliquam dictum tempus sem nec dignissim.
+      </p>
+      <p>
+        Fusce luctus lacus a ipsum dapibus pellentesque. Nunc dapibus metus lacinia enim ultrices consequat. Praesent convallis elit sed velit hendrerit congue. Donec aliquam velit et egestas bibendum. Fusce nec urna euismod, tempor eros id, scelerisque diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras diam ex, posuere a tristique sed, efficitur in velit.
+      </p>
+      <p>
+        Duis eu odio dictum arcu consequat tempor nec a neque. Duis ultrices fermentum nulla in interdum. Donec imperdiet bibendum nisl. Donec justo nisl, iaculis nec eleifend sit amet, tincidunt finibus quam. Aenean lobortis tortor ac imperdiet ultrices. Donec a eleifend sem. Praesent vitae lorem faucibus, imperdiet magna vel, mollis dolor. Aenean ut sollicitudin ex. Nullam viverra faucibus ante et pulvinar. Curabitur maximus est sit amet ante elementum sagittis. Aliquam at tempor orci. Nam vel volutpat metus. Quisque semper, enim at fermentum hendrerit, elit leo volutpat nunc, a sagittis nunc urna nec dolor. Praesent lobortis elit dapibus eros suscipit, ut semper lectus fermentum.
+      </p>
+      <p>
+        Curabitur sed mi sapien. Nullam ullamcorper laoreet dui, id fermentum nisl aliquam et. Proin iaculis magna fermentum nisl rutrum cursus. Quisque vitae auctor sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus aliquam, arcu commodo tristique suscipit, risus augue ullamcorper risus, in dapibus libero lacus eu odio. Praesent rutrum suscipit luctus. Pellentesque id erat nibh. Integer vel orci tristique, fermentum leo vitae, tincidunt urna. Suspendisse venenatis metus nisl, non tincidunt orci elementum ut. Curabitur vitae luctus ligula. Nunc consequat eu justo a efficitur. Vivamus eu luctus urna, sit amet aliquam ligula. Nulla euismod purus quis eros volutpat sollicitudin. Cras consequat convallis mi non vehicula.
+      </p>
+    </section>
+
   </div>
-  <script src="../src/responsive-left-menu.js"></script>
+
+  <script src="../assets/js/vertical-responsive-menu.js"></script>
+
 </body>
 </html>

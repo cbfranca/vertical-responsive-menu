@@ -1,0 +1,303 @@
+/*
+=========================
+Vertical Reponsive Menu
+=========================
+*/
+
+
+// Core variables and mixins
+@import "import/variables";
+@import "import/mixins";
+
+
+// CSS
+* {
+  box-sizing: border-box;
+}
+
+
+// Hack to vertical_nav height 100% on mobile
+html {
+  //min-height: 100%;
+  //position: relative;
+}
+
+
+:focus,
+:active {
+  outline: none;
+}
+
+
+.toggle_menu {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+
+  i {
+    display: block;
+    font-size: 28px;
+  }
+
+}
+
+
+.vertical_nav {
+  position: absolute;
+  left: -$vertical_nav_width;
+  top: $vertical_nav_margin_top;
+  bottom: 0px;
+  width: $vertical_nav_width;
+  //height: 100%;
+  background: $vertical_nav_bg_color;
+  @extend %transition;
+}
+
+.vertical_nav__closed {
+  left: - $vertical_nav_width !important;
+}
+
+.vertical_nav__opened {
+  left: 0px !important;
+  box-shadow: rgba(0, 0, 0, 0.4) -30px 0 30px 30px;
+}
+
+
+.menu {
+  position: absolute;
+  top: 20px;
+  bottom: 40px;
+  overflow-y: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu--item {
+  position: relative;
+  min-height: $menu_link_height;
+  line-height: $menu_link_height;
+}
+
+.menu--item__has_sub_menu .menu--link:after {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  height: $menu_link_height;
+  line-height: $menu_link_height;
+  font-family: "FontAwesome";
+  content: "\f0d7";
+}
+
+.menu--subitens__opened {
+  background: $menu_item_background;
+
+  .menu--link {
+    color: #000;
+  }
+
+  .sub_menu {
+    display: block;
+  }
+
+}
+
+.menu--link {
+  display: block;
+  overflow: hidden;
+  font-size: $menu_link_font_size;
+  text-decoration: none;
+  color: $menu_link_color;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover,
+  &:hover .menu--label {
+    color: #000;
+    background: $menu_item_hover_background;
+  }
+
+}
+
+.menu--icon {
+  display: block;
+  float: left;
+  width: 50px;
+  height: $menu_link_height;
+  line-height: $menu_link_height;
+  font-size: 20px;
+}
+
+.menu--label {
+  display: block;
+  height: $menu_link_height;
+  line-height: $menu_link_height;
+}
+
+
+// Menu sub level
+.sub_menu {
+  display: none;
+  overflow: hidden;
+  padding-left: 0;
+  list-style: none;
+}
+.sub_menu--link {
+  display: block;
+  padding-left: $vertical_nav_minify_width;
+  padding-right: $menu_subitem_link_padding;
+  font-size: $menu_link_font_size;
+  color: $menu_link_color;
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+    background: $menu_item_hover_background;
+  }
+
+}
+.sub_menu--link__active {
+  color: #000;
+  font-weight: 500;
+}
+// End - Menu sub level
+
+
+// collapse_menu -- display none in mobile
+.collapse_menu {
+  display: none;
+
+  .collapse_menu--icon {
+    @extend %transition;
+  }
+
+}
+
+
+// Small devices (tablets)
+@media (min-width: 768px) {}
+
+
+// Medium devices (desktops)
+@media (min-width: 992px) {
+
+  .vertical_nav {
+    left: 0;
+  }
+
+  .toggle_menu {
+    display: none;
+  }
+
+
+  // Minify menu
+  .vertical_nav__minify {
+    width: $vertical_nav_minify_width;
+
+    .menu {
+      overflow: visible;
+    }
+
+    .menu--label {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: $vertical_nav_minify_width;
+      width: $menu_subitens_on_minify_menu;
+      padding-left: $menu_subitem_link_padding;
+      padding-right: $menu_subitem_link_padding;
+      background: $menu_item_background;
+      font-weight: 500;
+    }
+
+    .menu--item__has_sub_menu .menu--link:after {
+      content: "";
+    }
+
+
+    // Menu sub level
+    .menu--subitens__opened .menu--label,
+    .menu--subitens__opened .sub_menu {
+      display: block;
+    }
+    .sub_menu {
+      position: absolute;
+      top: $menu_link_height;
+      left: $vertical_nav_minify_width;
+      width: $menu_subitens_on_minify_menu;
+      background: $menu_item_background;
+    }
+    .sub_menu--link {
+      padding-left: $menu_subitem_link_padding;
+    }
+    // End - Menu sub level
+
+
+    .collapse_menu--icon {
+      -webkit-transform: rotate(180deg);
+    }
+
+  }
+  // End - Minify menu
+
+
+  .collapse_menu {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: $menu_link_height;
+    line-height: $menu_link_height;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #e6e6e6;
+    background: $vertical_nav_bg_color;
+    color: #666;
+    font-size: $menu_link_font_size;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+      background: $darker_background_10;
+    }
+
+    .collapse_menu--icon {
+      display: block;
+      float: left;
+      width: 50px;
+      height: $menu_link_height;
+      line-height: $menu_link_height;
+      font-size: 20px;
+
+      &:before {
+        content: "\f053";
+      }
+
+    }
+
+    .collapse_menu--label {
+      display: block;
+      height: $menu_link_height;
+      line-height: $menu_link_height;
+    }
+
+  }
+
+
+}
+// End - Medium devices (desktops)
+
+
+// Large devices (Large desktops)
+@media (min-width: 1200px) {}
+
