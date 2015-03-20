@@ -175,6 +175,11 @@ html {
 // collapse_menu -- display none in mobile
 .collapse_menu {
   display: none;
+
+  .collapse_menu--icon {
+    @extend %transition;
+  }
+
 }
 
 
@@ -218,10 +223,6 @@ html {
       content: "";
     }
 
-    .collapse_menu i:before {
-      content: "\f054";
-    }
-
 
     // Menu sub level
     .menu--subitens__opened .menu--label,
@@ -239,6 +240,11 @@ html {
       padding-left: $menu_subitem_link_padding;
     }
     // End - Menu sub level
+
+
+    .collapse_menu--icon {
+      -webkit-transform: rotate(180deg);
+    }
 
   }
   // End - Minify menu
