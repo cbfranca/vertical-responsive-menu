@@ -1,7 +1,7 @@
-Responsive Left Menu
+Vertical Responsive Menu
 ====================
 
-A mobile first left menu using HTML, CSS &amp; JS
+A mobile first vertical responsive menu using HTML, CSS &amp; JS
 
 Live demo
 -----------------------------------
