@@ -8,9 +8,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'assets/sass',
+          cwd: 'src/sass',
           src: ['*.scss'],
-          dest: 'assets/css',
+          dest: 'src',
           ext: '.css'
         }],
         options: {
@@ -23,20 +23,45 @@ module.exports = function(grunt) {
 
     watch: {
       css: {
-        files: 'assets/sass/**/*.scss',
+        files: 'src/sass/**/*.scss',
         tasks: ['sass']
         // tasks: ['sass', 'csscomb']
       }
     },
 
     csscomb: {
-        dynamic_mappings: {
-            expand: true,
-            cwd: 'assets/css/',
-            src: ['*.css'],
-            dest: 'assets/css/',
-            ext: '.css'
-        }
+      dynamic_mappings: {
+        expand: true,
+        cwd: 'src/sass/',
+        src: ['*.scss'],
+        dest: 'src/sass/',
+        ext: '.scss'
+      }
+    },
+
+    uglify: {
+      options: { mangle: true },
+      my_target: {
+        files: [{
+          expand: true,
+          flatten: true,
+          cwd: 'src/',
+          src: ['vertical-responsive-menu.js' ],
+          dest: 'dist/',
+          ext: '.min.js'
+        }]
+      }
+    },
+
+    cssmin: {
+      minify: {
+        expand: true,
+        flatten: true,
+        cwd: 'src/',
+        src: ['vertical-responsive-menu.css'],
+        dest: 'dist/',
+        ext: '.min.css'
+      }
     }
 
   });
@@ -45,7 +70,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-csscomb');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   // Default task(s).
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('build', ['cssmin','uglify']);
 
 };

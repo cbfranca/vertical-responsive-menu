@@ -1,9 +1,10 @@
 {
-  "name": "responsive-left-menu",
-  "version": "0.0.1",
-  "homepage": "https://github.com/cbfranca/responsive-left-menu",
+  "name": "vertical-responsive-menu",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cbfranca/vertical-responsive-menu",
   "authors": [
-    "Cleidson França"
+    "Cleidson França",
+    "Marcelo Ribeiro"
   ],
   "description": "Vertical responsive menu",
   "moduleType": [
@@ -15,7 +16,7 @@
     "menu"
   ],
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "fontawesome": "~4.3.0",
     "normalize.css": "~3.0.2"
   }
