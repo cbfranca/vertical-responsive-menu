@@ -56,10 +56,9 @@ var tid = setInterval( function () {
 
         for (var j = 0; j < subnavs.length; j++) {
 
-          if(this != subnavs[j]){
-            console.log(this);
+          if(this != subnavs[j])
             subnavs[j].classList.remove('menu--subitens__opened');
-          }
+          
 
         }
 
