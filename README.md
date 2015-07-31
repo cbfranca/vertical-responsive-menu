@@ -32,6 +32,6 @@ Screenshots
 How to install
 --------------------------------------
 
-## Bower
+### Bower
 
-You can install it via bower, using this command: bower install --save vertical-responsive-menu
+You can install it via bower, using this command: ```bower install --save vertical-responsive-menu``
