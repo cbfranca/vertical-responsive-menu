@@ -54,12 +54,12 @@ var tid = setInterval( function () {
 
       subnavs[i].addEventListener('click', function (e) {
 
-        e.preventDefault();
-
         for (var j = 0; j < subnavs.length; j++) {
 
-          if(this != subnavs[j])
+          if(this != subnavs[j]){
+            console.log(this);
             subnavs[j].classList.remove('menu--subitens__opened');
+          }
 
         }
 
