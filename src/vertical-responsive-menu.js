@@ -18,8 +18,7 @@ var tid = setInterval( function () {
   var wrapper = document.querySelector('.wrapper');
 
   var menu = document.getElementById("js-menu");
-  var subnavs = menu.querySelectorAll('.menu--item__has_sub_menu');
-
+  var subnavs = menu.querySelectorAll('.menu--item__has_sub_menu');    
 
   // Toggle menu click
   querySelector('.toggle_menu').onclick = function () {
@@ -39,30 +38,28 @@ var tid = setInterval( function () {
     wrapper.classList.toggle('wrapper__minify');
 
     for (var j = 0; j < subnavs.length; j++) {
-
       subnavs[j].classList.remove('menu--subitens__opened');
-
     }
 
   };
 
 
   // Open Sub Menu
+  
   for (var i = 0; i < subnavs.length; i++) {
-
+    
     if (subnavs[i].classList.contains('menu--item__has_sub_menu') ) {
+      
+      subnavs[i].querySelector('.menu--link').addEventListener('click', function (e) {
 
-      subnavs[i].addEventListener('click', function (e) {
+          for (var j = 0; j < subnavs.length; j++) {
 
-        for (var j = 0; j < subnavs.length; j++) {
+            if(e.target.offsetParent != subnavs[j])
+              subnavs[j].classList.remove('menu--subitens__opened');          
 
-          if(this != subnavs[j])
-            subnavs[j].classList.remove('menu--subitens__opened');
-          
+          }
 
-        }
-
-        this.classList.toggle('menu--subitens__opened');
+          e.target.offsetParent.classList.toggle('menu--subitens__opened');
 
       }, false);
 
